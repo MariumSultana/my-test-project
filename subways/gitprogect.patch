@@ -1,0 +1,307 @@
+diff --git a/subways/.classpath b/subways/.classpath
+new file mode 100644
+index 0000000..0a1dadd
+--- /dev/null
++++ b/subways/.classpath
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" output="target/classes" path="src/main/java">
++		<attributes>
++			<attribute name="optional" value="true"/>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
++		<attributes>
++			<attribute name="optional" value="true"/>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
++		<attributes>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
++		<attributes>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="output" path="target/classes"/>
++</classpath>
+diff --git a/subways/.gitignore b/subways/.gitignore
+new file mode 100644
+index 0000000..b83d222
+--- /dev/null
++++ b/subways/.gitignore
+@@ -0,0 +1 @@
++/target/
+diff --git a/subways/.project b/subways/.project
+new file mode 100644
+index 0000000..e99fb25
+--- /dev/null
++++ b/subways/.project
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>subways</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.m2e.core.maven2Builder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++		<nature>org.eclipse.m2e.core.maven2Nature</nature>
++	</natures>
++</projectDescription>
+diff --git a/subways/.settings/org.eclipse.core.resources.prefs b/subways/.settings/org.eclipse.core.resources.prefs
+new file mode 100644
+index 0000000..f9fe345
+--- /dev/null
++++ b/subways/.settings/org.eclipse.core.resources.prefs
+@@ -0,0 +1,4 @@
++eclipse.preferences.version=1
++encoding//src/main/java=UTF-8
++encoding//src/test/java=UTF-8
++encoding/<project>=UTF-8
+diff --git a/subways/.settings/org.eclipse.jdt.core.prefs b/subways/.settings/org.eclipse.jdt.core.prefs
+new file mode 100644
+index 0000000..abec6ca
+--- /dev/null
++++ b/subways/.settings/org.eclipse.jdt.core.prefs
+@@ -0,0 +1,5 @@
++eclipse.preferences.version=1
++org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.5
++org.eclipse.jdt.core.compiler.compliance=1.5
++org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
++org.eclipse.jdt.core.compiler.source=1.5
+diff --git a/subways/.settings/org.eclipse.m2e.core.prefs b/subways/.settings/org.eclipse.m2e.core.prefs
+new file mode 100644
+index 0000000..f897a7f
+--- /dev/null
++++ b/subways/.settings/org.eclipse.m2e.core.prefs
+@@ -0,0 +1,4 @@
++activeProfiles=
++eclipse.preferences.version=1
++resolveWorkspaceProjects=true
++version=1
+diff --git a/subways/pom.xml b/subways/pom.xml
+new file mode 100644
+index 0000000..66f63e4
+--- /dev/null
++++ b/subways/pom.xml
+@@ -0,0 +1,40 @@
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++  <modelVersion>4.0.0</modelVersion>
++
++  <groupId>com.subway</groupId>
++  <artifactId>subways</artifactId>
++  <version>0.0.1-SNAPSHOT</version>
++  <packaging>jar</packaging>
++
++  <name>subways</name>
++  <url>http://maven.apache.org</url>
++
++  <properties>
++    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++  </properties>
++
++  <dependencies>
++   <dependency>
++      <groupId>junit</groupId>
++      <artifactId>junit</artifactId>
++      <version>4.11</version>
++      <scope>test</scope>
++    </dependency>
++    
++    <dependency>
++      <groupId>org.seleniumhq.selenium</groupId>
++      <artifactId>selenium-java</artifactId>
++      <version>2.48.2</version>
++      <scope>test</scope>
++    </dependency>
++
++    <dependency>
++        <groupId>org.hamcrest</groupId>
++        <artifactId>hamcrest-core</artifactId>
++        <version>1.3</version>
++        <scope>test</scope>
++    </dependency>
++
++  </dependencies>
++</project>
+diff --git a/subways/src/main/java/com/subway/subways/App.java b/subways/src/main/java/com/subway/subways/App.java
+new file mode 100644
+index 0000000..5e9287d
+--- /dev/null
++++ b/subways/src/main/java/com/subway/subways/App.java
+@@ -0,0 +1,13 @@
++package com.subway.subways;
++
++/**
++ * Hello world!
++ *
++ */
++public class App 
++{
++    public static void main( String[] args )
++    {
++        System.out.println( "Hello World!" );
++    }
++}
+diff --git a/subways/src/test/java/com/subway/subways/SubwayAbstructPage.java b/subways/src/test/java/com/subway/subways/SubwayAbstructPage.java
+new file mode 100644
+index 0000000..2fb5e73
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subways/SubwayAbstructPage.java
+@@ -0,0 +1,5 @@
++package com.subway.subways;
++
++public class SubwayAbstructPage {
++
++}
+diff --git a/subways/src/test/java/com/subway/subways/SubwayAbstructPageMsc.java b/subways/src/test/java/com/subway/subways/SubwayAbstructPageMsc.java
+new file mode 100644
+index 0000000..0fe872c
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subways/SubwayAbstructPageMsc.java
+@@ -0,0 +1,71 @@
++package com.subway.subways;
++
++import java.util.concurrent.TimeUnit;
++
++import org.junit.Test;
++import org.openqa.selenium.By;
++import org.openqa.selenium.NoSuchElementException;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.firefox.FirefoxDriver;
++import org.openqa.selenium.interactions.Action;
++import org.openqa.selenium.interactions.Actions;
++import org.openqa.selenium.support.ui.Select;
++
++public class SubwayAbstructPageMsc {
++WebDriver dr;
++@Test
++public void subwayTest() throws InterruptedException{
++	dr = new FirefoxDriver();
++	dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
++	//dr.get("http://www.subway.com/");
++	dr.get("http://dhtmlx.com/docs/products/dhtmlxTree/");
++	WebElement fromElement = dr.findElement(By.xpath("//span[@class='standartTreeRow'][contains(., 'Nancy Atherton')]"));
++	WebElement toElement = dr.findElement(By.xpath("//div[@id='treebox2']/div/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr[1]/td[4]/span[contains(., 'Bestsellers')]"));
++	try{
++	Actions action = new Actions(dr);
++	Action dragDrop = action.dragAndDrop(fromElement, toElement).build();
++	dragDrop.perform();
++	}catch(NoSuchElementException e){
++		e.printStackTrace();
++	}
++	
++	Thread.sleep(5000);
++	//click on menu and nutrition
++	//click on feature product
++	//click on subway card
++	//click on manage your card
++	//validate opens another window and validate Username (email address): is present 
++	dr.quit();
++}
++
++public void dragAndDropby(){
++	WebElement fromElement = dr.findElement(By.xpath(""));
++Actions slider =  new Actions(dr)
++.dragAndDropBy(fromElement, 20, 30);
++slider.build().perform();
++
++WebElement sourceElement = dr.findElement(By.xpath(""));
++WebElement targetElement = dr.findElement(By.xpath(""));
++Actions action =  new Actions(dr);
++Action dragAndDrop = action.dragAndDrop(sourceElement, targetElement).build();
++dragAndDrop.perform();
++
++Actions actions = new Actions(dr);
++Action dragdrops = actions.clickAndHold(sourceElement).moveToElement(targetElement).release(targetElement).build();
++dragdrops.perform();
++Select dropDown =  new Select(sourceElement);
++dropDown.selectByVisibleText("");
++
++	}
++public void dragAndDrop(){
++	WebElement sources=dr.findElement(By.xpath(""));
++	Actions action = new Actions(dr);
++	Action dragDrop = action.clickAndHold(sources).moveToElement(sources).release(sources).build();
++	dragDrop.perform();
++	Actions sliders = new Actions(dr)
++	.dragAndDropBy(dr.findElement(By.xpath("")), 10, 6);
++	sliders.build().perform();
++	
++}
++}
+diff --git a/subways/src/test/java/com/subway/subways/SubwayDetailPage.java b/subways/src/test/java/com/subway/subways/SubwayDetailPage.java
+new file mode 100644
+index 0000000..f5545f6
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subways/SubwayDetailPage.java
+@@ -0,0 +1,5 @@
++package com.subway.subways;
++
++public class SubwayDetailPage {
++
++}
+diff --git a/subways/src/test/java/com/subway/subways/SubwayHomePage.java b/subways/src/test/java/com/subway/subways/SubwayHomePage.java
+new file mode 100644
+index 0000000..d7035a7
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subways/SubwayHomePage.java
+@@ -0,0 +1,5 @@
++package com.subway.subways;
++
++public class SubwayHomePage {
++
++}
+diff --git a/subways/src/test/java/com/subway/subways/SubwayResultPage.java b/subways/src/test/java/com/subway/subways/SubwayResultPage.java
+new file mode 100644
+index 0000000..98bea37
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subways/SubwayResultPage.java
+@@ -0,0 +1,5 @@
++package com.subway.subways;
++
++public class SubwayResultPage {
++
++}
+diff --git a/subways/src/test/java/com/subway/subwaysTest/SubwayAbstructTest.java b/subways/src/test/java/com/subway/subwaysTest/SubwayAbstructTest.java
+new file mode 100644
+index 0000000..c792cd7
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subwaysTest/SubwayAbstructTest.java
+@@ -0,0 +1,5 @@
++package com.subway.subwaysTest;
++
++public class SubwayAbstructTest {
++
++}
+diff --git a/subways/src/test/java/com/subway/subwaysTest/SubwayVerifyTextTest.java b/subways/src/test/java/com/subway/subwaysTest/SubwayVerifyTextTest.java
+new file mode 100644
+index 0000000..22a861a
+--- /dev/null
++++ b/subways/src/test/java/com/subway/subwaysTest/SubwayVerifyTextTest.java
+@@ -0,0 +1,5 @@
++package com.subway.subwaysTest;
++
++public class SubwayVerifyTextTest {
++
++}
